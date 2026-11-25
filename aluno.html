@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDUCA PLAY - Meu painel</title><link rel="stylesheet" href="css/estilo.css"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1e6fff"><link rel="icon" href="icons/icon-192.png"></head>
+<body class="painel aluno"><div class="bg" id="bg" aria-hidden="true"></div>
+<main class="wrap">
+<header class="topo"><div class="avatar" aria-hidden="true">🦊</div>
+<div><h1 id="ola">Olá!</h1><p id="info" class="sub"></p></div>
+<button class="sair" onclick="sair()">Sair</button></header>
+<p id="status" class="vazio" hidden></p>
+<section class="stats">
+<div class="stat"><b id="nivel">1</b><span>Nível</span></div>
+<div class="stat"><b id="xp">0</b><span>XP</span></div>
+<div class="stat"><b id="moedas">0</b><span>Moedas 🪙</span></div>
+<div class="stat"><b>0</b><span>Medalhas 🏅</span></div></section>
+<h2>Escolha uma matéria</h2><section id="materias" class="grid"></section>
+<section id="biblioteca" hidden><h2 id="bibTitulo"></h2><div id="jogos" class="grid jogos"></div></section>
+<h2>Atividades pendentes</h2><p class="vazio">Nenhuma atividade por enquanto. 🎉</p>
+<h2>Histórico de partidas</h2><div id="historico"></div><button id="teste" class="sec" hidden>🧪 Registrar partida de teste</button>
+</main>
+<script src="js/api.js"></script><script src="js/offline.js"></script><script src="js/app.js"></script><script src="js/aluno.js"></script><script src="js/pwa.js"></script></body></html>

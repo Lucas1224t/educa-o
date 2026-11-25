@@ -1,0 +1,44 @@
+:root{--azul:#1e6fff;--roxo:#7c4dff;--amarelo:#ffc83d;--verde:#2ecc71;--texto:#1b2a4a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--texto);overflow-x:hidden;background:linear-gradient(160deg,#bfe3ff,#e8f4ff 45%,#fff3c4)}
+body.admin{background:linear-gradient(160deg,#d9ccff,#eef0ff 50%,#cfe9ff)}
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.bg span{position:absolute;bottom:-60px;font-size:34px;opacity:.55;animation:sobe linear infinite}
+@keyframes sobe{to{transform:translateY(-115vh) rotate(25deg)}}
+@media(prefers-reduced-motion:reduce){.bg span{animation:none;bottom:auto}}
+.login{position:relative;z-index:1;max-width:420px;margin:auto;padding:28px 20px;text-align:center}
+.mascote{font-size:84px;line-height:1;animation:pula 2s ease-in-out infinite}
+@keyframes pula{50%{transform:translateY(-10px)}}
+h1{margin:6px 0 0;font-size:34px;color:var(--azul)}.admin h1{color:var(--roxo);font-size:26px}
+.sub{margin:4px 0 18px;font-weight:600}
+.card{background:#fff;border-radius:28px;padding:20px;display:grid;gap:14px;text-align:left;box-shadow:0 10px 28px #1e6fff33;margin-bottom:14px}
+.admin .card{box-shadow:0 10px 28px #7c4dff33}
+label{display:grid;gap:6px;font-weight:700}
+input,select{padding:16px;border:3px solid #d5e3ff;border-radius:16px;font-size:18px;font-family:inherit}
+input:focus,select:focus{outline:none;border-color:var(--azul)}
+button{padding:16px;border:0;border-radius:18px;background:var(--azul);color:#fff;font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #1553bd}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 #1553bd}
+.admin button{background:var(--roxo);box-shadow:0 5px 0 #5a35c9}
+button.sec{background:var(--amarelo);color:var(--texto);box-shadow:0 5px 0 #d9a514}
+#msg,#msg2{margin:0;text-align:center;font-weight:700;min-height:1.2em}
+.troca{font-weight:700}.troca a{color:var(--roxo)}
+[hidden]{display:none!important}
+/* ---- Paineis ---- */
+.painel .wrap{position:relative;z-index:1;max-width:900px;margin:auto;padding:20px}
+.topo{display:flex;align-items:center;gap:14px}.topo h1{margin:0;font-size:26px}.topo .sub{margin:2px 0 0}
+.avatar{font-size:56px;background:#fff;border-radius:50%;width:84px;height:84px;display:grid;place-items:center;box-shadow:0 6px 16px #0002}
+.sair{margin-left:auto;font-size:15px;padding:10px 16px;background:#fff;color:var(--texto);box-shadow:0 3px 0 #0002}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:18px 0}
+.stat{background:#fff;border-radius:22px;padding:14px;text-align:center;box-shadow:0 6px 16px #0001}
+.stat b{display:block;font-size:30px;color:var(--azul)}.admin .stat b{color:var(--roxo)}.stat span{font-weight:700;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.materia{background:var(--c);box-shadow:0 6px 0 #0003;padding:22px 10px;font-size:19px;display:grid;gap:6px;justify-items:center}
+.materia span{font-size:46px}
+.jogos{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+.jogo{background:#fff;border-radius:18px;padding:14px;text-align:center;font-weight:800;opacity:.75}.jogo span{display:block;font-size:30px}.jogo small{display:block;font-weight:600}
+.vazio{background:#fff9;border-radius:16px;padding:14px;font-weight:700}
+.painel .card{margin:16px 0}.linha{display:flex;flex-wrap:wrap;gap:10px}.linha input,.linha select{flex:1 1 160px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{background:#fff;color:var(--texto);border:3px solid var(--roxo);box-shadow:none;font-size:16px;padding:10px 16px}
+.chip.on{background:var(--roxo);color:#fff}
+.aluno-linha{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:2px solid #eef}
+.mini{font-size:14px;padding:8px 12px;background:#ff6b6b;box-shadow:none}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDUCA PLAY - Área do Administrador</title><link rel="stylesheet" href="css/estilo.css"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1e6fff"><link rel="icon" href="icons/icon-192.png"></head>
+<body class="admin"><div class="bg" id="bg" aria-hidden="true"></div>
+<main class="login">
+<div class="mascote" aria-hidden="true">🎓</div>
+<h1>Área do Administrador</h1><p class="sub">Professor, coordenador, diretor ou responsável geral</p>
+<form id="fProf" class="card">
+<label>Usuário<input name="username" autocomplete="username" placeholder="Seu usuário" required></label>
+<label>Senha<input name="password" type="password" autocomplete="current-password" placeholder="Sua senha" required></label>
+<button>ENTRAR</button>
+<button type="button" id="abrirCadastro" class="sec">Criar conta</button>
+<p id="msg" role="status"></p>
+</form>
+<form id="fCadastro" class="card" hidden>
+<label>Nome completo<input name="name" required></label>
+<label>Cargo<select name="cargo"><option value="professor">Professor(a)</option><option value="coordenador">Coordenador(a)</option><option value="diretor">Diretor(a)</option><option value="responsavel">Responsável geral</option></select></label>
+<label>Usuário<input name="username" required></label>
+<label>E-mail (para recuperar a senha)<input name="email" type="email" required></label>
+<label>Senha (mínimo 8)<input name="password" type="password" minlength="8" required></label>
+<button>CRIAR CONTA</button><button type="button" id="voltarLogin" class="sec">Voltar</button>
+<p id="msg2" role="status"></p>
+</form>
+<p class="troca"><a href="index.html">← Voltar ao login do aluno</a></p>
+</main><script src="js/app.js"></script><script src="js/pwa.js"></script></body></html>

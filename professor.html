@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EDUCA PLAY - Painel</title><link rel="stylesheet" href="css/estilo.css"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1e6fff"><link rel="icon" href="icons/icon-192.png"></head>
+<body class="painel admin">
+<main class="wrap">
+<header class="topo"><div class="avatar" aria-hidden="true">🎓</div>
+<div><h1 id="titulo">Painel</h1><p id="cargo" class="sub"></p></div><button class="sair" onclick="sair()">Sair</button></header>
+<section class="stats">
+<div class="stat"><b id="tAlunos">0</b><span>Alunos</span></div>
+<div class="stat"><b id="tTurmas">0</b><span>Turmas</span></div>
+<div class="stat"><b>0</b><span>Jogos realizados</span></div>
+<div class="stat"><b>-</b><span>Média de aproveitamento</span></div>
+<div class="stat"><b>0</b><span>Atividades pendentes</span></div></section>
+<section class="card"><h2>Nova turma</h2>
+<form id="fTurma" class="linha"><input name="name" placeholder="Ex.: 1º Ano A" required>
+<select name="schoolYear"><option value="1">1º ano</option><option value="2">2º ano</option><option value="3">3º ano</option><option value="4">4º ano</option><option value="5">5º ano</option></select>
+<button>Criar turma</button></form></section>
+<section class="card"><h2>Minhas turmas</h2><div id="turmas" class="chips"></div></section>
+<section id="detalhe" class="card" hidden><h2 id="dTitulo"></h2><p id="dCodigo" class="sub"></p>
+<h3>Adicionar aluno</h3>
+<form id="fAluno" class="linha"><input name="fullName" placeholder="Nome completo" required>
+<input name="username" placeholder="Nome de usuário" required><input name="password" type="password" placeholder="Senha inicial" minlength="6" required>
+<button>Adicionar aluno</button></form><p id="msg" role="status"></p>
+<h3>Alunos da turma</h3><div id="alunos"></div></section>
+</main>
+<script src="js/api.js"></script><script src="js/professor.js"></script><script src="js/pwa.js"></script></body></html>
